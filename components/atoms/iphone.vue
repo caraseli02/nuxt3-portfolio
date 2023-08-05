@@ -49,19 +49,26 @@
             <section class="flex justify-center items-center ml-4">
               <div class="w-32 h-32 shadow-inner shadow-green-400 overflow-hidden p-1 rounded-full">
                 <div class="flex h-full w-full items-center  justify-center back rounded-full">
-                  <img src="~/assets/img/man.png" alt="Man" class="w-full h-auto rounded-full">
+                  <img src="~/assets/img/man.png" alt="Man" class="w-full h-auto rounded-full profile-img">
                 </div>
               </div>
             </section>
-            <section class="text-slate-600 flex justify-center items-center flex-col mt-6">
-              <h2 class="font-semibold text-gray-900 text-xl">
-                VueJs Developer.
+            <section class="text-slate-600 grid grid-cols-1 justify-items-center items-center mt-8 h-40 relative">
+              <h2 class="font-semibold text-gray-900 text-xl uppercase text-center absolute top-0 h-8 overflow-hidden">
+                <div class="text-wrapper leading-[0] mt-4 text-stone-100">
+                  <p class="title-role drop-shadow-2xl">Frontend Developer</p>
+                  <p class="title-role">UI/UX enthusiast</p>
+                  <p class="title-role">Webapps Tester</p>
+                </div>
               </h2>
-              <span class="text-gray-700 text-xs mt-4 px-3">
+              <div class="text-slate-600 text-lg h-10 flex justify-center flex-wrap">
+                <Icon v-for="icon in logos" :key="icon" :name="icon" class="h-10 w-10 mr-2 mb-2 skill-icons" />
+              </div>
+              <!-- <span class="text-gray-700 text-xs mt-4 px-2">
                 After all, when you really LOVE WHAT YOU DO, it doesn’t seem like work,
                 does it?
               </span>
-              <AtomsFlags />
+              <AtomsFlags /> -->
             </section>
           </div>
         </div>
@@ -70,8 +77,43 @@
   </div>
 </template>
 
-<script setup lang="ts">
+<script setup>
+import SplitTextJS from 'split-text-js';
+const logos = ['logos:vueuse', 'logos:vue', 'logos:pinia', 'logos:nuxt-icon', 'logos:cypress-icon', 'logos:tailwindcss-icon', 'logos:vitest', 'logos:vitejs', 'logos:firebase', 'skill-icons:typescript']
 
+const { $gsap } = useNuxtApp()
+
+onMounted(() => {
+  const title = $gsap.utils.toArray('.title-role')
+  const skillIcons = $gsap.utils.toArray('.skill-icons')
+  const tl = $gsap.timeline({ repeat: -1 })
+
+  title.forEach(async (title) => {
+    const splitTitle = new SplitTextJS(title)
+    tl
+      .from(splitTitle.chars, {
+        opacity: 0,
+        y: 80,
+        rotateX: -90,
+        stagger: 0.035,
+        ease: "power1.inOut",
+      }, '<')
+      .to(splitTitle.chars, {
+        opacity: 0,
+        y: -80,
+        rotateX: 90,
+        stagger: 0.035,
+        ease: "power1.inOut",
+        delay: 5,
+      }, "<1"); // Add a delay of 2 seconds between switches
+  })
+
+  tl.to(".profile-img", {
+    clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
+    scale: 1.1,
+    duration: 1.4,
+  })
+})
 </script>
 
 <style scoped>

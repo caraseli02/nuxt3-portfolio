@@ -2,7 +2,8 @@
 export default defineNuxtConfig({
   modules: [
     '@nuxtjs/tailwindcss',
-    'nuxt-icon'
+    'nuxt-icon',
+    '@hypernym/nuxt-gsap'
   ],
   tailwindcss: {
     cssPath: '~/assets/tailwind.css',
@@ -10,5 +11,11 @@ export default defineNuxtConfig({
     exposeConfig: false,
     injectPosition: 0,
     viewer: true,
-  }
+  },
+  components: [
+    {
+      path: '~/components',
+      pathPrefix: false,
+    },
+  ],
 })
