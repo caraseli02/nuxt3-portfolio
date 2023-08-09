@@ -1,61 +1,51 @@
-<script>
-import HireMeModal from "../HireMeModal.vue";
-import AppNavigation from "./AppNavigation.vue";
+<script setup>
 
-export default {
-  components: {
-    HireMeModal,
-    AppNavigation,
+
+const isOpen = ref(false)
+const modal = ref(false)
+const colorMode = ref("dark")
+const categories = [
+  {
+    id: 1,
+    value: "web",
+    name: "Web Application",
   },
-  data: () => {
-    return {
-      isOpen: false,
-      modal: false,
-      categories: [
-        {
-          id: 1,
-          value: "web",
-          name: "Web Application",
-        },
-        {
-          id: 2,
-          value: "mobile",
-          name: "Mobile Applicaiton",
-        },
-        {
-          id: 3,
-          value: "ui-ux",
-          name: "UI/UX Design",
-        },
-        {
-          id: 4,
-          value: "branding",
-          name: "Branding & Animations",
-        },
-      ],
-    };
+  {
+    id: 2,
+    value: "mobile",
+    name: "Mobile Applicaiton",
   },
-  methods: {
-    themeSwitcher() {
-      this.$colorMode.preference =
-        this.$colorMode.value == "light" ? "dark" : "light";
-    },
-    showModal() {
-      if (this.modal) {
-        // Stop screen scrolling
-        document
-          .getElementsByTagName("html")[0]
-          .classList.remove("overflow-y-hidden");
-        this.modal = false;
-      } else {
-        document
-          .getElementsByTagName("html")[0]
-          .classList.add("overflow-y-hidden");
-        this.modal = true;
-      }
-    },
+  {
+    id: 3,
+    value: "ui-ux",
+    name: "UI/UX Design",
   },
-};
+  {
+    id: 4,
+    value: "branding",
+    name: "Branding & Animations",
+  },
+]
+
+
+function themeSwitcher() {
+  colorMode.value == "light" ? "dark" : "light";
+}
+
+function showModal() {
+  if (modal.value) {
+    // Stop screen scrolling
+    document
+      .getElementsByTagName("html")[0]
+      .classList.remove("overflow-y-hidden");
+    modal.value = false;
+  } else {
+    document
+      .getElementsByTagName("html")[0]
+      .classList.add("overflow-y-hidden");
+    modal.value = true;
+  }
+}
 </script>
 
 <template>
@@ -74,7 +64,7 @@ export default {
         <!-- Header logos -->
         <div>
           <NuxtLink to="/">
-            <img v-if="this.$colorMode.value == 'dark'" src="/logo-light.svg" class="w-36" alt="Light Logo" />
+            <img v-if="colorMode == 'dark'" src="/logo-light.svg" class="w-36" alt="Light Logo" />
 
             <img v-else src="/logo-dark.svg" alt="Color Logo" class="w-36" />
           </NuxtLink>
@@ -94,7 +84,7 @@ export default {
             cursor-pointer
           ">
           <!-- Dark mode icon -->
-          <svg v-if="$colorMode.value == 'light'" xmlns="http://www.w3.org/2000/svg" class="
+          <svg v-if="colorMode == 'light'" xmlns="http://www.w3.org/2000/svg" class="
               text-liText-ternary-dark
               hover:text-gray-400
               dark:text-liText-ternary-light
@@ -168,7 +158,7 @@ export default {
             cursor-pointer
           ">
           <!-- Dark mode icon -->
-          <svg v-if="$colorMode.value == 'light'" xmlns="http://www.w3.org/2000/svg" class="
+          <svg v-if="colorMode == 'light'" xmlns="http://www.w3.org/2000/svg" class="
               text-liText-ternary-dark
               hover:text-gray-400
               dark:text-liText-ternary-light
