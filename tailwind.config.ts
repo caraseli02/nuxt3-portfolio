@@ -1,9 +1,25 @@
 import type { Config } from 'tailwindcss'
 
 export default <Partial<Config>>{
+  purge: [
+    "./components/**/*.{vue,js}",
+    "./layouts/**/*.vue",
+    "./pages/**/*.vue",
+    "./plugins/**/*.{js,ts}",
+    "./nuxt.config.{js,ts}",
+  ],
+  darkMode: "class",
   theme: {
     extend: {
       colors: {
+        "primary-light": "#F7F8FC",
+        "secondary-light": "#FFFFFF",
+        "ternary-light": "#f6f7f8",
+
+        "primary-dark": "#1A1A1A",
+        "secondary-dark": "#102D44",
+        "ternary-dark": "#1E3851",
+
         'body': '#17171F',
         'selected-text': '#A3A3FF',
         'theme': '#4ade80',
@@ -13,28 +29,20 @@ export default <Partial<Config>>{
         'input-border': '#565666',
         'input': '#2A2A35'
       },
-      fontFamily: {
-        'poppins': ["'Poppins'", 'sans-serif']
-      },
-      animation: {
-        blob: "blob 7s infinite",
-      },
-      keyframes: {
-        blob: {
-          "0%": {
-            transform: "translate(0px, 0px) scale(1)",
-          },
-          "33%": {
-            transform: "translate(30px, -50px) scale(1.1)",
-          },
-          "66%": {
-            transform: "translate(-20px, 20px) scale(0.9)",
-          },
-          "100%": {
-            transform: "tranlate(0px, 0px) scale(1)",
-          },
+      container: {
+        padding: {
+          DEFAULT: "1rem",
+          sm: "2rem",
+          lg: "5rem",
+          xl: "6rem",
+          "2xl": "8rem",
         },
       },
-    }
-  }
+    },
+  },
+  variants: {
+    extend: {
+      opacity: ["disabled"],
+    },
+  },
 }

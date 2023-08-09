@@ -3,7 +3,9 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/tailwindcss',
     'nuxt-icon',
-    '@hypernym/nuxt-gsap'
+    '@hypernym/nuxt-gsap',
+    '@nuxtjs/eslint-module',
+    '@nuxtjs/color-mode'
   ],
   tailwindcss: {
     cssPath: '~/assets/tailwind.css',
@@ -18,4 +20,7 @@ export default defineNuxtConfig({
       pathPrefix: false,
     },
   ],
+  colorMode: {
+    classSuffix: ''
+  }
 })
