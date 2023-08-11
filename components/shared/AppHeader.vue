@@ -1,55 +1,54 @@
 <script setup>
-
-
 const isOpen = ref(false)
 const modal = ref(false)
-const colorMode = ref("dark")
 const categories = [
   {
     id: 1,
-    value: "web",
-    name: "Web Application",
+    value: 'web',
+    name: 'Web Application',
   },
   {
     id: 2,
-    value: "mobile",
-    name: "Mobile Applicaiton",
+    value: 'mobile',
+    name: 'Mobile Applicaiton',
   },
   {
     id: 3,
-    value: "ui-ux",
-    name: "UI/UX Design",
+    value: 'ui-ux',
+    name: 'UI/UX Design',
   },
   {
     id: 4,
-    value: "branding",
-    name: "Branding & Animations",
+    value: 'branding',
+    name: 'Branding & Animations',
   },
 ]
 
-
+const colorMode = useColorMode()
 function themeSwitcher() {
-  colorMode.value == "light" ? "dark" : "light";
+  colorMode.preference
+    = colorMode.value == 'light' ? 'dark' : 'light'
 }
 
 function showModal() {
   if (modal.value) {
     // Stop screen scrolling
     document
-      .getElementsByTagName("html")[0]
-      .classList.remove("overflow-y-hidden");
-    modal.value = false;
-  } else {
+      .getElementsByTagName('html')[0]
+      .classList.remove('overflow-y-hidden')
+    modal.value = false
+  }
+  else {
     document
-      .getElementsByTagName("html")[0]
-      .classList.add("overflow-y-hidden");
-    modal.value = true;
+      .getElementsByTagName('html')[0]
+      .classList.add('overflow-y-hidden')
+    modal.value = true
   }
 }
 </script>
 
 <template>
-  <nav id="nav" class="sm:container sm:mx-auto">
+  <nav id="nav" class="sm:container sm:mx-auto fixed top-0 left-0 right-0 z-10">
     <!-- Header -->
     <div class="
         z-10
@@ -64,14 +63,14 @@ function showModal() {
         <!-- Header logos -->
         <div>
           <NuxtLink to="/">
-            <img v-if="colorMode == 'dark'" src="/logo-light.svg" class="w-36" alt="Light Logo" />
+            <img v-if="$colorMode.value == 'light'" src="/logo-light.svg" class="w-36" alt="Light Logo">
 
-            <img v-else src="/logo-dark.svg" alt="Color Logo" class="w-36" />
+            <img v-else src="/logo-dark.svg" alt="Color Logo" class="w-36">
           </NuxtLink>
         </div>
 
         <!-- Theme switcher small screen -->
-        <button @click="themeSwitcher" class="
+        <button class="
             sm:hidden
             ml-8
             bg-primary-light
@@ -82,9 +81,9 @@ function showModal() {
             shadow-sm
             rounded-xl
             cursor-pointer
-          ">
+          " @click="themeSwitcher">
           <!-- Dark mode icon -->
-          <svg v-if="colorMode == 'light'" xmlns="http://www.w3.org/2000/svg" class="
+          <svg v-if="$colorMode.value == 'light'" xmlns="http://www.w3.org/2000/svg" class="
               text-liText-ternary-dark
               hover:text-gray-400
               dark:text-liText-ternary-light
@@ -105,7 +104,7 @@ function showModal() {
 
         <!-- Small screen hamburger menu -->
         <div class="sm:hidden">
-          <button @click="isOpen = !isOpen" type="button" class="focus:outline-none" aria-label="Hamburger Menu">
+          <button type="button" class="focus:outline-none" aria-label="Hamburger Menu" @click="isOpen = !isOpen">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="
                 h-7
                 w-7
@@ -116,20 +115,19 @@ function showModal() {
               ">
               <path v-if="isOpen" fill-rule="evenodd"
                 d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"
-                clip-rule="evenodd"></path>
+                clip-rule="evenodd" />
               <path v-if="!isOpen" fill-rule="evenodd"
-                d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z">
-              </path>
+                d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z" />
             </svg>
           </button>
         </div>
       </div>
 
       <!-- Header links -->
-      <AppNavigation :isOpen="isOpen" :showModal="showModal" :modal="modal" :categories="categories" />
+      <AppNavigation :is-open="isOpen" :show-modal="showModal" :modal="modal" :categories="categories" />
 
       <!-- Header right section buttons -->
-      <div class="hidden sm:flex justify-between items-center flex-col md:flex-row">
+      <div :key="+isOpen" class="hidden sm:flex justify-between items-center flex-col md:flex-row">
         <!-- Hire me button -->
         <div class="font-general-medium hidden md:block">
           <button class="
@@ -141,13 +139,13 @@ function showModal() {
               rounded-md
               px-5
               py-2.5
-            " @click="showModal()" aria-label="Hire Me Button">
+            " aria-label="Hire Me Button" @click="showModal()">
             Hire Me
           </button>
         </div>
 
         <!-- Theme switcher large screen -->
-        <button @click="themeSwitcher" class="
+        <button class="
             sm:ml-6
             bg-primary-light
             dark:bg-ternary-dark
@@ -156,9 +154,9 @@ function showModal() {
             shadow-sm
             rounded-lg
             cursor-pointer
-          ">
+          " @click="themeSwitcher">
           <!-- Dark mode icon -->
-          <svg v-if="colorMode == 'light'" xmlns="http://www.w3.org/2000/svg" class="
+          <svg v-if="$colorMode.value == 'light'" xmlns="http://www.w3.org/2000/svg" class="
               text-liText-ternary-dark
               hover:text-gray-400
               dark:text-liText-ternary-light
@@ -180,6 +178,6 @@ function showModal() {
     </div>
 
     <!-- Hire me modal -->
-    <HireMeModal :showModal="showModal" :modal="modal" :categories="categories" aria-modal="Hire Me Modal" />
+    <HireMeModal :show-modal="showModal" :modal="modal" :categories="categories" aria-modal="Hire Me Modal" />
   </nav>
 </template>
