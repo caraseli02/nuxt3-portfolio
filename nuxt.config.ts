@@ -4,8 +4,8 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     'nuxt-icon',
     '@hypernym/nuxt-gsap',
-    '@nuxtjs/eslint-module',
-    '@nuxtjs/color-mode'
+    '@nuxtjs/color-mode',
+    '@vueuse/nuxt',
   ],
   tailwindcss: {
     cssPath: '~/assets/tailwind.css',
@@ -21,6 +21,6 @@ export default defineNuxtConfig({
     },
   ],
   colorMode: {
-    classSuffix: ''
-  }
+    classSuffix: '',
+  },
 })

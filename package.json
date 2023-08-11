@@ -10,7 +10,9 @@
   "devDependencies": {
     "@hypernym/nuxt-gsap": "^2.2.2",
     "@nuxtjs/color-mode": "^3.3.0",
-    "@nuxtjs/eslint-module": "^4.1.0",
+    "@antfu/eslint-config": "^0.39.5",
+    "@nuxt/devtools": "^0.5.5",
+    "@vueuse/nuxt": "^10.1.2",
     "eslint": "^8.46.0",
     "nuxt": "^3.5.2"
   },
