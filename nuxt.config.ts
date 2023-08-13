@@ -1,4 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import { fileURLToPath } from 'node:url'
+
 export default defineNuxtConfig({
   modules: [
     '@nuxtjs/tailwindcss',
@@ -6,7 +8,11 @@ export default defineNuxtConfig({
     '@hypernym/nuxt-gsap',
     '@nuxtjs/color-mode',
     '@vueuse/nuxt',
+    '@pinia/nuxt',
   ],
+  alias: {
+    '@': fileURLToPath(new URL('./', import.meta.url)),
+  },
   tailwindcss: {
     cssPath: '~/assets/tailwind.css',
     configPath: 'tailwind.config',
@@ -23,4 +29,12 @@ export default defineNuxtConfig({
   colorMode: {
     classSuffix: '',
   },
+  imports: {
+    dirs: ['./stores'],
+  },
+
+  pinia: {
+    autoImports: ['defineStore', 'acceptHMRUpdate'],
+  },
+
 })
