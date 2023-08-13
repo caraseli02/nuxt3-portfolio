@@ -1,15 +1,16 @@
+<script setup lang="ts">
+
+</script>
 
 <template>
   <div class="container mx-auto">
     <AppBanner />
 
-    <!-- <ProjectsGrid /> -->
+    <ProjectsGrid />
 
     <!-- View more projects button -->
-    <!-- <div class="mt-5 sm:mt-14 flex justify-center">
-      <NuxtLink
-        to="/projects"
-        class="
+    <div class="my-5 sm:mt-14 flex justify-center">
+      <NuxtLink to="/projects" class="
           font-general-medium
           flex
           items-center
@@ -24,18 +25,12 @@
           text-white text-lg
           sm:text-xl
           duration-300
-        "
-        aria-label="More Projects"
-      >
+        " aria-label="More Projects">
         <Button title="More Projects" />
       </NuxtLink>
-    </div> -->
+    </div>
   </div>
 </template>
-
-<script setup lang="ts">
-
-</script>
 
 <style scoped>
 </style>

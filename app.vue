@@ -1,7 +1,10 @@
+<script setup>
+</script>
+
 <template>
   <AppHeader />
   <div>
-      <NuxtPage />
+    <NuxtPage />
     <!-- Go back to top when scrolled down -->
     <div class="
         flex
@@ -20,12 +23,11 @@
   </div>
 </template>
 
-<script setup>
-</script>
-
 <style>
-html, body , #__nuxt{
-  @apply m-0 p-0 h-screen bg-secondary-light dark:bg-primary-dark min-h-screen flex flex-col
+html,
+body,
+#__nuxt {
+  @apply m-0 p-0 min-h-screen bg-secondary-light dark:bg-primary-dark flex flex-col
 }
 
 .vue-back-to-top {
