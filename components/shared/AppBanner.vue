@@ -1,8 +1,8 @@
 <script setup>
 const { $gsap } = useNuxtApp()
 const showAnimation = ref(false)
-const enterTitle = (el) => {
-  $gsap.to(el, { 'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)', opacity: 1, y: 0, duration: 1.2 })
+function enterTitle(el) {
+  $gsap.to(el, { 'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)', 'opacity': 1, 'y': 0, 'duration': 1.2 })
 }
 onMounted(() => {
   showAnimation.value = true
@@ -16,6 +16,8 @@ onMounted(() => {
       items-center
       sm:flex-row
       h-screen
+      max-w-screen
+      overflow-hidden
       pt-40
     ">
     <!-- Banner left contents -->
@@ -70,15 +72,19 @@ onMounted(() => {
               hover:text-white
               duration-500
             " aria-label="Download Resume">
-            <Icon name="uil:down-arrow" class="ml-0 sm:ml-1 mr-2 sm:mr-3 w-5 sm:w-6 duration-100"></Icon>
+            <Icon name="uil:down-arrow" class="ml-0 sm:ml-1 mr-2 sm:mr-3 w-5 sm:w-6 duration-100" />
             <span class="text-sm sm:text-lg font-general-medium duration-100">Download CV</span>
           </a>
         </div>
       </div>
     </Transition>
+    <div v-show="showAnimation"
+      class="absolute left-0 right-0 bottom-48 lg:bottom-0 -mx-2 -rotate-[4.5deg] flex gap-8 py-3 my-12 border-t-2 border-b-2 border-t-teal-500 border-b-teal-900 self-start">
+      <marqueeList />
+    </div>
     <!-- Banner right illustration -->
-    <div class="img-container w-full md:w-2/3 text-right float-right absolute bottom-0 right-0 max-h-[90vh]">
-      <img class="inline-flex" src="/fotoProfile.png" alt="Developer Light" />
+    <div class="img-container w-full lg:w-2/3 text-right float-right absolute bottom-0 right-0 max-h-[90vh]">
+      <img class="inline-flex" src="/fotoProfile.png" alt="Developer Light">
     </div>
   </section>
 </template>
