@@ -9,6 +9,7 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
     '@vueuse/nuxt',
     '@pinia/nuxt',
+    '@nuxt/image',
   ],
   alias: {
     '@': fileURLToPath(new URL('./', import.meta.url)),
@@ -36,5 +37,9 @@ export default defineNuxtConfig({
   pinia: {
     autoImports: ['defineStore', 'acceptHMRUpdate'],
   },
-
+  gsap: {
+    extraPlugins: {
+      scrollTrigger: true,
+    },
+  },
 })

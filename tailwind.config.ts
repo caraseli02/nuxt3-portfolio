@@ -29,15 +29,6 @@ export default <Partial<Config>>{
         'input-border': '#565666',
         'input': '#2A2A35',
       },
-      container: {
-        padding: {
-          'DEFAULT': '1rem',
-          'sm': '2rem',
-          'lg': '5rem',
-          'xl': '6rem',
-          '2xl': '8rem',
-        },
-      },
       keyframes: {
         marquee: {
           from: { transform: 'translateX(0)' },
