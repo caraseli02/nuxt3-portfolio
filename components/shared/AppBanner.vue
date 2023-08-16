@@ -2,7 +2,7 @@
 const { $gsap } = useNuxtApp()
 const showAnimation = ref(false)
 function enterTitle(el) {
-  $gsap.to(el, { 'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)', 'opacity': 1, 'y': 0, 'duration': 1.2 })
+  $gsap.to(el, { 'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)', 'opacity': 1, 'y': 0, 'duration': 1.8 })
 }
 onMounted(() => {
   showAnimation.value = true
@@ -22,7 +22,7 @@ onMounted(() => {
     ">
     <!-- Banner left contents -->
     <Transition appear @before-enter="enterTitle">
-      <div v-show="showAnimation" class="title w-full lg:w-1/3 text-left self-start lg:self-center">
+      <div v-show="showAnimation" class="title w-full lg:w-1/3 text-left self-start lg:self-center md:ml-12">
         <p class="
             font-general-semibold
             text-lg

@@ -27,7 +27,7 @@ const categories = [
 const colorMode = useColorMode()
 function themeSwitcher() {
   colorMode.preference
-    = colorMode.value == 'light' ? 'dark' : 'light'
+    = colorMode.value === 'light' ? 'dark' : 'light'
 }
 
 function showModal() {
@@ -48,7 +48,7 @@ function showModal() {
 </script>
 
 <template>
-  <nav id="nav" class="sm:container sm:mx-auto fixed top-0 left-0 right-0 z-10">
+  <nav id="nav" class="sm:container sm:mx-auto absolute top-0 left-0 right-0 z-10">
     <!-- Header -->
     <div class="
         z-10
