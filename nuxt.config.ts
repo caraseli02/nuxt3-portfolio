@@ -11,9 +11,11 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     '@nuxt/image',
   ],
+
   alias: {
     '@': fileURLToPath(new URL('./', import.meta.url)),
   },
+
   tailwindcss: {
     cssPath: '~/assets/tailwind.css',
     configPath: 'tailwind.config',
@@ -21,15 +23,18 @@ export default defineNuxtConfig({
     injectPosition: 0,
     viewer: true,
   },
+
   components: [
     {
       path: '~/components',
       pathPrefix: false,
     },
   ],
+
   colorMode: {
     classSuffix: '',
   },
+
   imports: {
     dirs: ['./stores'],
   },
@@ -37,9 +42,14 @@ export default defineNuxtConfig({
   pinia: {
     autoImports: ['defineStore', 'acceptHMRUpdate'],
   },
+
   gsap: {
     extraPlugins: {
       scrollTrigger: true,
     },
+  },
+
+  devtools: {
+    enabled: true,
   },
 })

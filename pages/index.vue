@@ -14,9 +14,9 @@ onMounted(() => {
   const innerWrappers = $gsap.utils.toArray('.inner')
 
   document.addEventListener('wheel', handleWheel)
-  document.addEventListener('touchstart', handleTouchStart)
-  document.addEventListener('touchmove', handleTouchMove)
-  document.addEventListener('touchend', handleTouchEnd)
+  // document.addEventListener('touchstart', handleTouchStart)
+  // document.addEventListener('touchmove', handleTouchMove)
+  // document.addEventListener('touchend', handleTouchEnd)
 
   let listening = false
   let direction = 'down'
@@ -198,7 +198,7 @@ Sections animate in and out on scroll. Scroll up or down and the sections will w
       <div class="outer">
         <div class="inner">
           <div ref="bg" class="bg" :class="{ dark: colorMode.value === 'dark' }">
-            <component :is="item.component" />
+            <component class="z-10" :is="item.component" />
           </div>
         </div>
       </div>

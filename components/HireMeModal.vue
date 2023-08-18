@@ -1,29 +1,27 @@
-<script>
-import Button from "./reusable/Button.vue";
-export default {
-  props: ["showModal", "modal", "categories"],
-  components: { Button },
-  data: () => {
-    return {
-      // @todo
-    };
-  },
-  methods: {},
-};
+<script setup>
+const props = defineProps(['showModal', 'modal', 'categories'])
+
+watch(() => props.modal, (val) => {
+  if (val)
+    document.body.style.overflow = 'hidden'
+
+  else
+    document.body.style.overflow = 'auto'
+})
 </script>
 
 <template>
   <transition name="fade">
     <div v-show="modal" class="font-general-regular fixed inset-0 z-30">
       <!-- Modal body background as backdrop -->
-      <div v-show="modal" @click="showModal()" class="
+      <div v-show="modal" class="
           bg-filter bg-black bg-opacity-50
           fixed
           inset-0
           w-full
           h-full
           z-20
-        "></div>
+        " @click="showModal()" />
       <!-- Modal contents -->
       <main class="flex flex-col items-center justify-center h-full w-full">
         <transition name="fade-up-down">
@@ -60,12 +58,12 @@ export default {
                 </button>
               </div>
               <div class="modal-body p-5 w-full h-full">
-                <form @submit="(e) => {
-                    e.preventDefault;
-                  }
-                  " class="max-w-xl m-4 text-left">
+                <form class="max-w-xl m-4 text-left" @submit="(e) => {
+                  e.preventDefault;
+                }
+                  ">
                   <div class="mt-0">
-                    <input class="
+                    <input id="name" class="
                         w-full
                         px-5
                         py-2
@@ -73,14 +71,14 @@ export default {
                         dark:border-secondary-dark
                         rounded-md
                         text-md
-                        bg-secondary-light
+                        bg-slate-100
                         dark:bg-ternary-dark
                         text-primary-dark
                         dark:text-ternary-light
-                      " id="name" name="name" type="text" required="" placeholder="Name" aria-label="Name" />
+                      " name="name" type="text" required="" placeholder="Name" aria-label="Name">
                   </div>
                   <div class="mt-6">
-                    <input class="
+                    <input id="email" class="
                         w-full
                         px-5
                         py-2
@@ -88,14 +86,14 @@ export default {
                         dark:border-secondary-dark
                         rounded-md
                         text-md
-                        bg-secondary-light
+                        bg-slate-100
                         dark:bg-ternary-dark
                         text-primary-dark
                         dark:text-ternary-light
-                      " id="email" name="email" type="text" required="" placeholder="Email" aria-label="Email" />
+                      " name="email" type="text" required="" placeholder="Email" aria-label="Email">
                   </div>
                   <div class="mt-6">
-                    <select class="
+                    <select id="subject" class="
                         w-full
                         px-5
                         py-2
@@ -103,11 +101,11 @@ export default {
                         dark:border-secondary-dark
                         rounded-md
                         text-md
-                        bg-secondary-light
+                        bg-slate-100
                         dark:bg-ternary-dark
                         text-primary-dark
                         dark:text-ternary-light
-                      " id="subject" name="subject" type="text" required="" aria-label="Project Category">
+                      " name="subject" type="text" required="" aria-label="Project Category">
                       <option v-for="category in categories" :key="category.id" :value="category.value">
                         {{ category.name }}
                       </option>
@@ -115,7 +113,7 @@ export default {
                   </div>
 
                   <div class="mt-6">
-                    <textarea class="
+                    <textarea id="message" class="
                         w-full
                         px-5
                         py-2
@@ -123,12 +121,11 @@ export default {
                         dark:border-secondary-dark
                         rounded-md
                         text-md
-                        bg-secondary-light
+                        bg-slate-100
                         dark:bg-ternary-dark
                         text-primary-dark
                         dark:text-ternary-light
-                      " id="message" name="message" cols="14" rows="6" aria-label="Details"
-                      placeholder="Project description"></textarea>
+                      " name="message" cols="14" rows="6" aria-label="Details" placeholder="Project description" />
                   </div>
 
                   <div class="mt-6 pb-4 sm:pb-1">
@@ -161,7 +158,7 @@ export default {
                     rounded-md
                     focus:ring-1 focus:ring-indigo-900
                     duration-500
-                  " @click="showModal()" aria-label="Close Hire Me Modal" />
+                  " aria-label="Close Hire Me Modal" @click="showModal()" />
               </div>
             </div>
           </div>
