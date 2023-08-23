@@ -7,7 +7,7 @@ const project = computed(() => projectStore.getProjectById(route.params.id))
 </script>
 
 <template>
-  <div class="container mx-auto">
+  <div class="container mx-auto mt-32 pb-16 px-4">
     <!-- Check if there are projects and then load -->
     <div v-if="project">
       <!-- Project heading and meta info -->
@@ -108,7 +108,7 @@ const project = computed(() => projectStore.getProjectById(route.params.id))
           <div class="mb-7">
             <p class="
                 font-general-medium
-                text-2xl text-ternary-dark
+                text-2xl text-te,0,0,0,0,0rnary-dark
                 dark:text-ternary-light
                 mb-2
               ">
@@ -124,7 +124,7 @@ const project = computed(() => projectStore.getProjectById(route.params.id))
           </div>
 
           <!-- Single project social sharing -->
-          <div>
+          <!-- <div>
             <p class="
                 font-general-medium
                 text-2xl text-ternary-dark
@@ -147,7 +147,7 @@ const project = computed(() => projectStore.getProjectById(route.params.id))
                   duration-500
                 "><i :data-feather="social.icon" class="w-4 lg:w-5 h-4 lg:h-5" /></a>
             </div>
-          </div>
+          </div> -->
         </div>
 
         <!-- Single project right section details -->
