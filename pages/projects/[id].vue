@@ -52,7 +52,7 @@ const project = computed(() => projectStore.getProjectById(route.params.id))
       <!-- Project gallery -->
       <div class="grid grid-cols-1 sm:grid-cols-3 sm:gap-10 mt-12">
         <div v-for="projectImage in project.projectImages" :key="projectImage.id" class="mb-10 sm:mb-0">
-          <img :src="projectImage.img" class="rounded-xl cursor-pointer shadow-lg sm:shadow-none">
+          <NuxtImg height="300px" width="400px" :src="projectImage.img" class="rounded-xl cursor-pointer shadow-lg sm:shadow-none" />
         </div>
       </div>
 
@@ -174,7 +174,7 @@ const project = computed(() => projectStore.getProjectById(route.params.id))
       </div>
 
       <!-- Project related projects -->
-      <ProjectRelatedProjects />
+      <!-- <ProjectRelatedProjects /> -->
     </div>
 
     <!-- Load not found components if no project found -->

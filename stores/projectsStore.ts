@@ -10,8 +10,8 @@ export const useProjectsStore = defineStore('projects', {
       {
         id: '260d1271-f1f2-4bc9-a5eb-05a89c8cccdb',
         title: 'Real Estate Web Application',
-        category: 'Web Application',
-        img: 'santandrea.png',
+        category: 'Front-End UI/UX',
+        img: 'santandrea0.png',
         publishDate: 'Feb 01, 2023',
         tag: 'UI / Frontend',
         clientTitle: 'Santandrea Top Properties',
@@ -26,17 +26,17 @@ export const useProjectsStore = defineStore('projects', {
             id: uuidv4(),
 
             title: 'Santandrea Top Properties',
-            img: '/santandrea.png',
+            img: '/santandrea1.png',
           },
           {
             id: uuidv4(),
             title: 'Santandrea Top Properties',
-            img: '/santandrea.png',
+            img: '/santandrea2.png',
           },
           {
             id: uuidv4(),
             title: 'Santandrea Top Properties',
-            img: '/santandrea.png',
+            img: '/santandrea3.png',
           },
         ],
         companyInfos: [
@@ -118,85 +118,87 @@ export const useProjectsStore = defineStore('projects', {
       },
       {
         id: '260d1271-f1f2-4bc9-a5eb-05a89c8cccdc',
-        title: 'Santandrea Top Properties',
-        category: 'Web Application',
-        img: '/santandrea.png',
-        publishDate: 'Nov 04, 2021',
-        tag: 'UI / Frontend',
-        clientTitle: 'About Client',
-        objectivesTitle: 'Objective',
+        title: 'Components Library',
+        category: 'Front-End UI/UX',
+        img: '/componentLib0.png',
+        publishDate: 'Jun 01, 2022',
+        tag: 'UI / Frontend Components',
+        clientTitle: 'Innovation Strategies',
+        objectivesTitle: 'Component library for Microfrontends',
         objectivesDetails:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, natus! Quibusdam enim quod in esse, mollitia molestias incidunt quas ipsa accusamus veniam.',
+          'Establish consistent design patterns, coding standards, and UI/UX elements across different microfrontends.',
         techTitle: 'Tools & Technologies',
         detailsTitle: 'Challenge',
         socialTitle: 'Share This',
         projectImages: [
           {
             id: uuidv4(),
-            title: 'Phoenix Digital Agency',
-            img: '/santandrea.png',
+            title: 'Storybook Components Library',
+            img: '/componentLib1.png',
           },
           {
             id: uuidv4(),
-            title: 'Phoenix Digital Agency',
-            img: '/santandrea.png',
+            title: 'Storybook Components Library',
+            img: '/componentLib2.png',
           },
           {
             id: uuidv4(),
-            title: 'Phoenix Digital Agency',
-            img: '/santandrea.png',
+            title: 'Storybook Components Library',
+            img: '/componentLib3.png',
           },
         ],
         companyInfos: [
           {
             id: uuidv4(),
             title: 'Name',
-            details: 'Company Ltd',
+            details: 'Innovation Strategies',
           },
           {
             id: uuidv4(),
             title: 'Services',
-            details: 'UI Design & Frontend Development',
+            details: 'UI & Frontend Development',
           },
           {
             id: uuidv4(),
             title: 'Website',
-            details: 'https://company.com',
+            details: 'https://www.innovation.es/',
           },
           {
             id: uuidv4(),
             title: 'Phone',
-            details: '555 8888 888',
+            details: '(+34) 971 770 877',
           },
         ],
         technologies: [
           'HTML',
           'CSS',
+          'Scss',
           'JavaScript',
-          'Nuxt.js',
-          'TailwindCSS',
-          'AdobeXD',
+          'TypeScript',
+          'Vue.js',
+          'PrimeVue',
+          'Azure DevOps',
         ],
         projectDetails: [
           {
             id: uuidv4(),
             details:
-              'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.',
+              'Ensuring that different microfrontends can smoothly integrate and upgrade to newer versions of the component library without causing conflicts or breaking changes can be challenging.',
           },
           {
             id: uuidv4(),
             details:
-              'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta?',
+              'Ensuring that components work seamlessly across various browsers, devices, and screen sizes requires thorough testing. Setting up automated testing processes and maintaining a high level of quality can be resource-intensive.',
           },
           {
             id: uuidv4(),
             details:
-              'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta?',
+              'Creating comprehensive and up-to-date documentation that explains how to use each component effectively is crucial. However, maintaining this documentation as the library evolves can become a challenge.',
           },
           {
             id: uuidv4(),
             details:
-              'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.',
+              'Components must be optimized for speed and minimal resource consumption, especially in scenarios where multiple microfrontends are loaded simultaneously.',
           },
         ],
         socialSharings: [
@@ -228,15 +230,15 @@ export const useProjectsStore = defineStore('projects', {
       },
       {
         id: '260d1271-f1f2-4bc9-a5eb-05a89c8cccdy',
-        title: 'Project Management UI',
-        category: 'UI/UX Design',
-        img: '/santandrea.png',
+        title: 'Vue Micro Frontends',
+        category: 'Front-End',
+        img: '/microfront0.png',
         publishDate: 'Nov 04, 2021',
         tag: 'UI / Frontend',
-        clientTitle: 'About Client',
-        objectivesTitle: 'Objective',
+        clientTitle: 'Innovation Strategies',
+        objectivesTitle: 'Microfrontends Development',
         objectivesDetails:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, natus! Quibusdam enim quod in esse, mollitia molestias incidunt quas ipsa accusamus veniam.',
+          'Break down monolithic legacy applications into independently developed, scalable, and reusable components, enabling faster iterations, team autonomy, and improved user experiences.',
         techTitle: 'Tools & Technologies',
         detailsTitle: 'Challenge',
         socialTitle: 'Share This',
@@ -244,69 +246,70 @@ export const useProjectsStore = defineStore('projects', {
           {
             id: uuidv4(),
             title: 'Project Management UI',
-            img: '/santandrea.png',
+            img: '/microfront1.png',
           },
           {
             id: uuidv4(),
             title: 'Project Management UI',
-            img: '/santandrea.png',
+            img: '/microfront2.png',
           },
           {
             id: uuidv4(),
             title: 'Project Management UI',
-            img: '/santandrea.png',
+            img: '/microfront3.png',
           },
         ],
         companyInfos: [
           {
             id: uuidv4(),
             title: 'Name',
-            details: 'Company Ltd',
+            details: 'Innovation Strategies',
           },
           {
             id: uuidv4(),
             title: 'Services',
-            details: 'UI Design & Frontend Development',
+            details: 'UI & Frontend Development',
           },
           {
             id: uuidv4(),
             title: 'Website',
-            details: 'https://company.com',
+            details: 'https://www.innovation.es/',
           },
           {
             id: uuidv4(),
             title: 'Phone',
-            details: '555 8888 888',
+            details: '(+34) 971 770 877',
           },
         ],
         technologies: [
           'HTML',
           'CSS',
+          'Scss',
           'JavaScript',
-          'Nuxt.js',
-          'TailwindCSS',
-          'AdobeXD',
+          'TypeScript',
+          'Vue.js',
+          'Azure DevOps',
         ],
         projectDetails: [
           {
             id: uuidv4(),
             details:
-              'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.',
+              'Coordinating version updates across various microfrontends can vas complex, as different components rely on different versions of shared libraries or APIs. Ensuring backward and forward compatibility without causing disruptions requires careful planning and communication.',
           },
           {
             id: uuidv4(),
             details:
-              'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta?',
+              'Integrating multiple microfrontends into a seamless application experience requires robust orchestration, routing, and cross-communication mechanisms. Dealing with state management, navigation, and data sharing among different components was difficult.',
           },
           {
             id: uuidv4(),
             details:
-              'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta?',
+              'Managing the build, testing, and deployment of numerous microfrontends can be intricate. Coordinating these processes while ensuring minimal downtime and smooth transitions necessitates a robust DevOps strategy.',
           },
           {
             id: uuidv4(),
             details:
-              'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.',
+              'Loading multiple microfrontends can impact the overall performance and user experience. Implementing strategies like lazy loading, code splitting, and optimizing network requests become essential to maintain acceptable performance levels. The Vue 3 framework provides a very good solution for this problem.',
           },
         ],
         socialSharings: [
@@ -338,15 +341,15 @@ export const useProjectsStore = defineStore('projects', {
       },
       {
         id: '260d1271-f1f2-4bc9-a5eb-05a89c8ccc99',
-        title: 'Cloud Storage Platform',
-        category: 'UI/UX Design',
-        img: '/santandrea.png',
-        publishDate: 'Nov 04, 2021',
+        title: 'Skipso Startup Platform',
+        category: 'Front-End',
+        img: '/skipso0.png',
+        publishDate: 'Oct 01, 2021',
         tag: 'Web / Frontend',
-        clientTitle: 'About Client',
+        clientTitle: 'Skipso is an innovation management platform',
         objectivesTitle: 'Objective',
         objectivesDetails:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, natus! Quibusdam enim quod in esse, mollitia molestias incidunt quas ipsa accusamus veniam.',
+          'As a frontend Vue.js developer I worked on innovative feature development, creating responsive user-centric designs, and collaborating with cross-functional teams to build efficient and performant web interfaces. I was also mantaing and improving components library.',
         techTitle: 'Tools & Technologies',
         detailsTitle: 'Challenge',
         socialTitle: 'Share This',
@@ -354,69 +357,69 @@ export const useProjectsStore = defineStore('projects', {
           {
             id: uuidv4(),
             title: 'Cloud Storage Platform',
-            img: '/santandrea.png',
+            img: '/skipso1.png',
           },
           {
             id: uuidv4(),
             title: 'Cloud Storage Platform',
-            img: '/santandrea.png',
+            img: '/skipso2.png',
           },
           {
             id: uuidv4(),
             title: 'Cloud Storage Platform',
-            img: '/santandrea.png',
+            img: '/skipso3.png',
           },
         ],
         companyInfos: [
           {
             id: uuidv4(),
             title: 'Name',
-            details: 'Company Ltd',
+            details: 'Skipso',
           },
           {
             id: uuidv4(),
             title: 'Services',
-            details: 'UI Design & Frontend Development',
+            details: 'Frontend Development',
           },
           {
             id: uuidv4(),
             title: 'Website',
-            details: 'https://company.com',
+            details: 'http://www.skipso.com',
           },
           {
             id: uuidv4(),
             title: 'Phone',
-            details: '555 8888 888',
+            details: '',
           },
         ],
         technologies: [
           'HTML',
           'CSS',
+          'Scss',
           'JavaScript',
-          'Nuxt.js',
-          'TailwindCSS',
+          'Vue.js',
           'AdobeXD',
         ],
         projectDetails: [
           {
             id: uuidv4(),
             details:
-              'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.',
+              'Striking the right balance between implementing innovative user interface designs and ensuring the functionality aligns with the startups business goals can be challenging, especially when design ideas might impact development timelines or vice versa.',
           },
           {
             id: uuidv4(),
             details:
-              'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta?',
+              'Effective collaboration with designers, backend developers, product managers, and other team members is crucial. Overcoming communication barriers, aligning expectations, and integrating frontend components seamlessly with backend systems can be complex.',
           },
           {
             id: uuidv4(),
             details:
-              'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta?',
+              'Ensuring that your Vue.js application works consistently across different browsers and devices can be time-consuming, especially when considering the varying capabilities and limitations of each platform.',
           },
           {
             id: uuidv4(),
             details:
-              'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.',
+              'Ensuring a smooth user experience while rapidly iterating and adding new features is a delicate balance, requiring careful consideration of how changes impact usability.',
           },
         ],
         socialSharings: [
@@ -448,15 +451,15 @@ export const useProjectsStore = defineStore('projects', {
       },
       {
         id: '260d1271-f1f2-4bc9-a5eb-05a89c8cccdm',
-        title: 'Uber Social App',
-        category: 'Mobile Application',
-        img: '/santandrea.png',
+        title: 'Apimosa Attendance App',
+        category: 'Front-End UI/UX',
+        img: '/apimosa.png',
         publishDate: 'Nov 04, 2021',
         tag: 'UI / Mobile',
-        clientTitle: 'About Client',
+        clientTitle: 'Painting company from Sevilla',
         objectivesTitle: 'Objective',
         objectivesDetails:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, natus! Quibusdam enim quod in esse, mollitia molestias incidunt quas ipsa accusamus veniam.',
+          'Provide a user-friendly digital solution for tracking and managing employee or student attendance efficiently.',
         techTitle: 'Tools & Technologies',
         detailsTitle: 'Challenge',
         socialTitle: 'Share This',
@@ -464,46 +467,46 @@ export const useProjectsStore = defineStore('projects', {
           {
             id: uuidv4(),
             title: 'Uber Social App',
-            img: '/santandrea.png',
+            img: '/apimosa1.png',
           },
           {
             id: uuidv4(),
             title: 'Uber Social App',
-            img: '/santandrea.png',
+            img: '/apimosa2.png',
           },
           {
             id: uuidv4(),
             title: 'Uber Social App',
-            img: '/santandrea.png',
+            img: '/apimosa3.png',
           },
         ],
         companyInfos: [
           {
             id: uuidv4(),
             title: 'Name',
-            details: 'Company Ltd',
+            details: 'Apimosa',
           },
           {
             id: uuidv4(),
             title: 'Services',
-            details: 'UI Design & Frontend Development',
+            details: 'UI/UX Design & Frontend Development',
           },
           {
             id: uuidv4(),
             title: 'Website',
-            details: 'https://company.com',
+            details: 'https://www.apimosa.es/',
           },
           {
             id: uuidv4(),
             title: 'Phone',
-            details: '555 8888 888',
+            details: '+34 674227938',
           },
         ],
         technologies: [
           'HTML',
           'CSS',
           'JavaScript',
-          'Nuxt.js',
+          'Vuej.js',
           'TailwindCSS',
           'AdobeXD',
         ],
@@ -511,132 +514,22 @@ export const useProjectsStore = defineStore('projects', {
           {
             id: uuidv4(),
             details:
-              'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.',
+              'Maintaining accurate and up-to-date attendance records in real-time is crucial. Ensuring that attendance information is reliably captured, recorded, and reflected instantly can be complex, especially during peak usage times. Firebase provides a great solution for this problem.',
           },
           {
             id: uuidv4(),
             details:
-              'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta?',
+              'Designing the app to function seamlessly across various devices (smartphones, tablets, desktops) and different operating systems can be challenging. Ensuring a consistent user experience across these platforms is important. One of the problems we faced was PWA support on IOS.',
           },
           {
             id: uuidv4(),
             details:
-              'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta?',
+              'Designing an intuitive and user-friendly interface that encourages user adoption can be complex. Balancing simplicity with necessary features while catering to various user preferences requires thoughtful design and testing.',
           },
           {
             id: uuidv4(),
             details:
-              'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.',
-          },
-        ],
-        socialSharings: [
-          {
-            id: uuidv4(),
-            name: 'Twitter',
-            icon: 'twitter',
-            url: 'https://twitter.com/realstoman',
-          },
-          {
-            id: uuidv4(),
-            name: 'LinkedIn',
-            icon: 'linkedin',
-            url: 'https://linkedin.com/in/realstoman',
-          },
-          {
-            id: uuidv4(),
-            name: 'Facebook',
-            icon: 'facebook',
-            url: 'https://facebook.com',
-          },
-          {
-            id: uuidv4(),
-            name: 'Instagram',
-            icon: 'instagram',
-            url: 'https://instagram.com',
-          },
-        ],
-      },
-      {
-        id: '260d1271-f1f2-4bc9-a5eb-05a89c8cccbb',
-        title: 'Apple Design System',
-        category: 'Web Application',
-        img: '/santandrea.png',
-        publishDate: 'Nov 04, 2021',
-        tag: 'UI / Mobile',
-        clientTitle: 'About Client',
-        objectivesTitle: 'Objective',
-        objectivesDetails:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, natus! Quibusdam enim quod in esse, mollitia molestias incidunt quas ipsa accusamus veniam.',
-        techTitle: 'Tools & Technologies',
-        detailsTitle: 'Challenge',
-        socialTitle: 'Share This',
-        projectImages: [
-          {
-            id: uuidv4(),
-            title: 'Apple Design System',
-            img: '/santandrea.png',
-          },
-          {
-            id: uuidv4(),
-            title: 'Apple Design System',
-            img: '/santandrea.png',
-          },
-          {
-            id: uuidv4(),
-            title: 'Apple Design System',
-            img: '/santandrea.png',
-          },
-        ],
-        companyInfos: [
-          {
-            id: uuidv4(),
-            title: 'Name',
-            details: 'Company Ltd',
-          },
-          {
-            id: uuidv4(),
-            title: 'Services',
-            details: 'UI Design & Frontend Development',
-          },
-          {
-            id: uuidv4(),
-            title: 'Website',
-            details: 'https://company.com',
-          },
-          {
-            id: uuidv4(),
-            title: 'Phone',
-            details: '555 8888 888',
-          },
-        ],
-        technologies: [
-          'HTML',
-          'CSS',
-          'JavaScript',
-          'Nuxt.js',
-          'TailwindCSS',
-          'AdobeXD',
-        ],
-        projectDetails: [
-          {
-            id: uuidv4(),
-            details:
-              'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.',
-          },
-          {
-            id: uuidv4(),
-            details:
-              'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta?',
-          },
-          {
-            id: uuidv4(),
-            details:
-              'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta?',
-          },
-          {
-            id: uuidv4(),
-            details:
-              'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.',
+              'Implementing secure user authentication and authorization mechanisms to ensure that only authorized individuals can mark attendance or access attendance records was a critical challenge. However, firebase auth provides a great solution for this problem.',
           },
         ],
         socialSharings: [
