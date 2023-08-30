@@ -18,10 +18,6 @@ const links = [
     path: '/projects',
   },
   {
-    name: 'About Me',
-    path: '/about',
-  },
-  {
     name: 'Contact',
     path: '/contact',
   },
@@ -57,10 +53,8 @@ const showMenu = computed(() => {
 </script>
 
 <template>
-    <!-- App header navigation links -->
-    <div
-      v-show="showMenu" :class="isOpen ? 'block bg-secondary-light dark:bg-primary-dark' : 'hidden'"
-      class="
+  <!-- App header navigation links -->
+  <div v-show="showMenu" :class="isOpen ? 'block bg-secondary-light dark:bg-primary-dark' : 'hidden'" class="
       font-general-regular
       m-0
       sm:ml-4
@@ -72,9 +66,8 @@ const showMenu = computed(() => {
       items-center
       shadow-lg
       sm:shadow-none
-    "
-    >
-      <!-- <NuxtLink to="/projects" class="
+    ">
+    <!-- <NuxtLink to="/projects" class="
         block
         text-left text-lg text-primary-dark
         dark:text-ternary-light
@@ -84,9 +77,8 @@ const showMenu = computed(() => {
         mb-2
         sm:py-2
       " aria-label="Projects">Projects</NuxtLink> -->
-      <TransitionGroup :key="showMenu" appear @enter="enterList" @before-enter="beforeEnterList">
-        <NuxtLink
-          v-for="(link, index) in links" :key="link.path" :to="link.path" :data-index="index" class="
+    <TransitionGroup :key="showMenu" appear @enter="enterList" @before-enter="beforeEnterList">
+      <NuxtLink v-for="(link, index) in links" :key="link.path" :to="link.path" :data-index="index" class="
         block
         text-left text-lg text-primary-dark
         dark:text-ternary-light
@@ -98,22 +90,33 @@ const showMenu = computed(() => {
         pt-3
         sm:pt-2 sm:border-t-0
         dark:border-secondary-dark
-      " :aria-label="link.name" :class="{ 'font-bold': link.path == route.path }"
-        >
-          {{ link.name }}
-        </NuxtLink>
-        <div
-          key="button" data-index="5" class="
+      " :aria-label="link.name" :class="{ 'font-bold': link.path === route.path }">
+        {{ link.name }}
+      </NuxtLink>
+      <a href="#about-me" class="
+        block
+        text-left text-lg text-primary-dark
+        dark:text-ternary-light
+        hover:text-secondary-dark
+        dark:hover:text-secondary-light
+        sm:mx-4
+        mb-2
+        sm:py-2
+        pt-3
+        sm:pt-2 sm:border-t-0
+        dark:border-secondary-dark
+      ">
+        Aboot Me
+      </a>
+      <div key="button" data-index="5" class="
         font-general-regular
         border-t-2
         pt-3
         sm:pt-0 sm:border-t-0
         border-primary-light
         dark:border-secondary-dark
-      "
-        >
-          <button
-            class="
+      ">
+        <button class="
           sm:hidden
           block
           text-left text-md
@@ -125,13 +128,12 @@ const showMenu = computed(() => {
           px-4
           py-2
           mt-2
-        " aria-label="Hire Me Button" @click="showModal()"
-          >
-            Hire Me
-          </button>
-        </div>
-      </TransitionGroup>
-    </div>
+        " aria-label="Hire Me Button" @click="showModal()">
+          Hire Me
+        </button>
+      </div>
+    </TransitionGroup>
+  </div>
 </template>
 
 <style scoped>

@@ -3,12 +3,12 @@
 </script>
 
 <template>
-  <div>
+  <div id="about-me" class="">
     <AboutMe class="container mx-auto" />
 
-    <AboutCounter />
+    <!-- <AboutCounter /> -->
 
-    <AboutClients class="container mx-auto" />
+    <!-- <AboutClients class="container mx-auto" /> -->
   </div>
 </template>
 
