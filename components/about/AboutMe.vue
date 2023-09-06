@@ -45,7 +45,7 @@ function changeText(text: string) {
 
 <style scoped>
 .clipt-path {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 50%, rgba(65, 184, 131, 1) 100%);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 50%, rgba(65, 184, 131, 1) 100%);
 }
 
 /*

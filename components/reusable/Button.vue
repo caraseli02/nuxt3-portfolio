@@ -1,14 +1,14 @@
-<template>
-  <button>{{ title }}</button>
-</template>
-
 <script>
 export default {
-  props: ["title"],
+  props: ['title'],
   data: () => {
     return {
       // @todo
-    };
+    }
   },
-};
+}
 </script>
+
+<template>
+  <button>{{ title }}</button>
+</template>

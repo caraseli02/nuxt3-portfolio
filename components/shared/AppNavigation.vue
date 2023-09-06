@@ -93,21 +93,6 @@ const showMenu = computed(() => {
       " :aria-label="link.name" :class="{ 'font-bold': link.path === route.path }">
         {{ link.name }}
       </NuxtLink>
-      <a href="#about-me" class="
-        block
-        text-left text-lg text-primary-dark
-        dark:text-ternary-light
-        hover:text-secondary-dark
-        dark:hover:text-secondary-light
-        sm:mx-4
-        mb-2
-        sm:py-2
-        pt-3
-        sm:pt-2 sm:border-t-0
-        dark:border-secondary-dark
-      ">
-        Aboot Me
-      </a>
       <div key="button" data-index="5" class="
         font-general-regular
         border-t-2

@@ -53,7 +53,7 @@ function showModal() {
     <div class="
         z-10
         max-w-screen-lg
-        xl:max-w-screen-xl
+        xl:max-w-screen-2xl
         block
         sm:flex sm:justify-between sm:items-center
         py-6
@@ -131,14 +131,7 @@ function showModal() {
         <!-- Hire me button -->
         <div class="font-general-medium hidden md:block">
           <button class="
-              text-md
-              bg-indigo-500
-              hover:bg-indigo-600
-              text-white
-              shadow-sm
-              rounded-md
-              px-5
-              py-2.5
+          text-indigo-700 hover:text-white border border-indigo-700 hover:bg-indigo-800 focus:ring-4 focus:outline-none focus:ring-indigo-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:border-indigo-400 dark:text-indigo-400 dark:hover:text-white dark:hover:bg-indigo-500 dark:focus:ring-indigo-900
             " aria-label="Hire Me Button" @click="showModal()">
             Hire Me
           </button>

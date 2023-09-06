@@ -13,40 +13,52 @@ onMounted(() => {
   <section class="
       flex flex-col
       sm:justify-between
-      items-center
+      items-start
       sm:flex-row
       h-screen
       max-w-screen
+      w-full
       overflow-hidden
-      pt-40
     ">
     <!-- Banner left contents -->
     <Transition appear @before-enter="enterTitle">
-      <div v-show="showAnimation" class="title w-full lg:w-1/3 text-left self-start lg:self-center md:ml-12">
-        <p class="
+      <div v-show="showAnimation" class="
+            title  self-start lg:self-center 
+            md:ml-24 pt-40
+            dark:text-primary-light text-ternary-dark
+            text-bold text-left
+            max-w-xs md:max-w-screen-sm w-full lg:w-2/3 mx-auto
+            flex flex-col gap-5
+            ">
+        <h4 class="
             font-general-semibold
-            text-lg
+            text-2xl
             text-center
             sm:text-left
-            text-gray-400
+            text-ternary-dark
+            dark:text-primary-light
             uppercase
+            font-semibold
           ">
           Hey, I am Vlad
-        </p>
+        </h4>
         <h1 class="
             title
             font-general-medium
             mt-2
             text-4xl
-            2xl:text-5xl
+            2xl:text-6xl
             text-center
             sm:text-left
             leading-none
-            text-ternary-dark
-            dark:text-primary-light
+
           ">
           Web & Components <i class="font-bold text-indigo-500">unique</i> solutions
         </h1>
+        <p class="lg:text-xl">
+          I'm a highly skilled and motivated freelance developer specializing in Vue.js and Nuxt.js. With a strong focus
+          on building robust and efficient components.
+        </p>
         <div class="flex justify-center sm:block">
           <a href="/VladResume.pdf" download="" class="
               flex
