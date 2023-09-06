@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss'
+const FormKitVariants = require('@formkit/themes/tailwindcss')
 
 export default <Partial<Config>>{
   purge: [
@@ -45,5 +46,9 @@ export default <Partial<Config>>{
       opacity: ['disabled'],
     },
   },
-
+  content: [
+    ...
+    './tailwind-theme.js',
+  ],
+  plugins: [FormKitVariants],
 }

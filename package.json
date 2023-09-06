@@ -8,6 +8,8 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@formkit/nuxt": "^1.0.0",
+    "@formkit/themes": "^1.0.0",
     "@nuxtjs/tailwindcss": "^6.4.1",
     "@pinia/nuxt": "^0.4.11",
     "gsap": "^3.11.4",
