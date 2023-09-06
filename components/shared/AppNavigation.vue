@@ -56,10 +56,7 @@ const showMenu = computed(() => {
   <!-- App header navigation links -->
   <div v-show="showMenu" :class="isOpen ? 'block bg-secondary-light dark:bg-primary-dark' : 'hidden'" class="
       font-general-regular
-      m-0
-      sm:ml-4
-      mt-5
-      sm:mt-3 sm:flex
+      sm:flex
       p-5
       sm:p-0
       justify-center
@@ -86,10 +83,11 @@ const showMenu = computed(() => {
         dark:hover:text-secondary-light
         sm:mx-4
         mb-2
-        sm:py-2
+        sm:p-2
         pt-3
         sm:pt-2 sm:border-t-0
         dark:border-secondary-dark
+        bg-white-100 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-40
       " :aria-label="link.name" :class="{ 'font-bold': link.path === route.path }">
         {{ link.name }}
       </NuxtLink>
@@ -113,6 +111,7 @@ const showMenu = computed(() => {
           px-4
           py-2
           mt-2
+          bg-white-100 bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-40
         " aria-label="Hire Me Button" @click="showModal()">
           Hire Me
         </button>

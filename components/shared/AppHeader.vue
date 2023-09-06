@@ -45,13 +45,13 @@ function showModal() {
     modal.value = true
   }
 }
+console.log(colorMode.value);
 </script>
 
 <template>
-  <nav id="nav" class="sm:container sm:mx-auto absolute top-0 left-0 right-0 z-10">
+  <nav id="nav" class="z-10 sm:container sm:mx-auto absolute top-0 left-0 right-0">
     <!-- Header -->
     <div class="
-        z-10
         max-w-screen-lg
         xl:max-w-screen-2xl
         block
@@ -61,11 +61,11 @@ function showModal() {
       <!-- Header menu links and small screen hamburger menu -->
       <div class="flex justify-between items-center px-6 sm:px-0">
         <!-- Header logos -->
-        <div>
+        <div v-if="colorMode.value">
           <NuxtLink to="/">
-            <img v-if="$colorMode.value == 'light'" src="/logo-light.svg" class="w-36" alt="Light Logo">
+            <img v-if="colorMode.value === 'light'" src="/logo-light.svg" class="w-36" alt="Light Logo">
 
-            <img v-else src="/logo-dark.svg" alt="Color Logo" class="w-36">
+            <img v-if="colorMode.value === 'dark'" src="/logo-dark.svg" alt="Color Logo" class="w-36">
           </NuxtLink>
         </div>
 
@@ -131,8 +131,9 @@ function showModal() {
         <!-- Hire me button -->
         <div class="font-general-medium hidden md:block">
           <button class="
-          text-indigo-700 hover:text-white border border-indigo-700 hover:bg-indigo-800 focus:ring-4 focus:outline-none focus:ring-indigo-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:border-indigo-400 dark:text-indigo-400 dark:hover:text-white dark:hover:bg-indigo-500 dark:focus:ring-indigo-900
-            " aria-label="Hire Me Button" @click="showModal()">
+          text-indigo-700 hover:text-white border border-indigo-700 hover:bg-indigo-800 focus:ring-4 focus:outline-none focus:ring-indigo-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:border-indigo-00 dark:text-indigo-200 dark:hover:text-white dark:hover:bg-indigo-500 dark:focus:ring-indigo-900
+          bg-white-100 bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-40
+          " aria-label="Hire Me Button" @click="showModal()">
             Hire Me
           </button>
         </div>

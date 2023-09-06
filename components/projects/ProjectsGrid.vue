@@ -53,7 +53,8 @@ const filteredProjects = computed(() => {
           sm:text-5xl
           font-semibold
           mb-2
-          md:mb-12
+          md:mb-4
+          2xl:mb-12
           mt-12
           md:mt-0
           text-ternary-dark
@@ -62,7 +63,7 @@ const filteredProjects = computed(() => {
           {{ projectsHeading }}
         </p>
         <!-- Note: This description is commented out, but if you want to see it, just uncomment this -->
-        <p class="hidden lg:block text-lg sm:text-xl text-gray-500 dark:text-ternary-light">
+        <p class="hidden 2xl:block text-lg sm:text-xl text-gray-500 dark:text-ternary-light">
           {{ projectsDescription }}
         </p>
       </div>

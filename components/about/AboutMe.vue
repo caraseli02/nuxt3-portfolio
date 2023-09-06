@@ -28,13 +28,13 @@ function changeText(text: string) {
     <!-- About details -->
     <section class="flex flex-col shrink-0 overflow-scroll flex-1">
       <div v-for="item in cards" :key="item.title"
-        class="cursor-pointer min-w-[320x] block lg:max-w-md p-2 lg:p-6 bg-white border-b border-gray-200 hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
+        class="cursor-pointer min-w-[320x] block lg:max-w-md p-2 lg:p-6 border-b border-gray-200 hover:bg-gray-100 dark:border-gray-700 dark:hover:bg-gray-700 bg-white-100 bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-40"
         @click="changeText(item.title)">
         <h5 class=" mb-2 text.xl lg:text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
           {{ item.title }}
         </h5>
         <Transition name="slide-fade">
-          <p v-if="showText === item.title" class="font-normal text-xs lg:text-base text-gray-700 dark:text-gray-400">
+          <p v-if="showText === item.title" class="font-normal text-xs lg:text-base text-gray-800 dark:text-gray-200">
             {{ item.text }}
           </p>
         </Transition>

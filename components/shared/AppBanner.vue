@@ -11,14 +11,9 @@ onMounted(() => {
 
 <template>
   <section class="
-      flex flex-col
-      sm:justify-between
-      items-start
-      sm:flex-row
-      h-screen
-      max-w-screen
-      w-full
-      overflow-hidden
+      flex flex-col sm:justify-between items-start sm:flex-row
+      h-screen w-full max-w-screen
+      overflow-hidden z-10
     ">
     <!-- Banner left contents -->
     <Transition appear @before-enter="enterTitle">
@@ -27,8 +22,8 @@ onMounted(() => {
             md:ml-24 pt-40
             dark:text-primary-light text-ternary-dark
             text-bold text-left
-            max-w-xs md:max-w-screen-sm w-full lg:w-2/3 mx-auto
-            flex flex-col gap-5
+            max-w-xs md:max-w-screen-sm w-full lg:w-2/5 xl:w-2/3 mx-auto
+            flex flex-col gap-5 z-10
             ">
         <h4 class="
             font-general-semibold
@@ -46,7 +41,7 @@ onMounted(() => {
             title
             font-general-medium
             mt-2
-            text-4xl
+            text-3xl
             2xl:text-6xl
             text-center
             sm:text-left
@@ -91,7 +86,7 @@ onMounted(() => {
       </div>
     </Transition>
     <div v-show="showAnimation"
-      class="absolute left-0 right-0 bottom-48 lg:bottom-0 -mx-2 -rotate-[4.5deg] flex gap-8 py-3 my-12 border-t-2 border-b-2 border-t-teal-500 border-b-teal-900 self-start">
+      class="absolute left-0 right-0 bottom-48 lg:bottom-0 -mx-2 -rotate-[4.5deg] flex gap-8 py-3 my-12 self-start">
       <marqueeList />
     </div>
     <!-- Banner right illustration -->
