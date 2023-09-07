@@ -27,8 +27,10 @@ function changeText(text: string) {
 
     <!-- About details -->
     <section class="flex flex-col shrink-0 overflow-scroll flex-1">
+      <flags class="lg:pl-4 xl:pl-6 text.xl lg:text-xl font-bold tracking-tight text-gray-900 dark:text-slate-200" />
+
       <div v-for="item in cards" :key="item.title"
-        class="cursor-pointer min-w-[320x] block lg:max-w-md p-2 lg:p-6 border-b border-gray-200 hover:bg-gray-100 dark:border-gray-700 dark:hover:bg-gray-700 bg-white-100 bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-40"
+        class="cursor-pointer min-w-[320x] block lg:max-w-md p-2 lg:p-4 xl:p-6 border-b border-gray-200 hover:bg-gray-100 dark:border-gray-700 dark:hover:bg-gray-700 bg-white-100 bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-40"
         @click="changeText(item.title)">
         <h5 class=" mb-2 text.xl lg:text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
           {{ item.title }}

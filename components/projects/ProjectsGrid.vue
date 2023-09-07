@@ -40,14 +40,17 @@ const filteredProjects = computed(() => {
 
   return projects
 })
+const isNotHomePage = computed(() => {
+  return route.path !== '/'
+})
 </script>
 
 <template>
-  <section :key="route.path" class="flex flex-col">
+  <section :key="route.path" class="flex flex-col pb-24">
     <div class="pt-10 sm:pt-20 md:pt-24 bg-transparent">
       <!-- Projects grid header -->
       <div class="text-center">
-        <p class="
+        <p v-show="isNotHomePage" class="
           font-general-semibold
           text-2xl
           sm:text-5xl
@@ -63,7 +66,7 @@ const filteredProjects = computed(() => {
           {{ projectsHeading }}
         </p>
         <!-- Note: This description is commented out, but if you want to see it, just uncomment this -->
-        <p class="hidden 2xl:block text-lg sm:text-xl text-gray-500 dark:text-ternary-light">
+        <p class="hidden 2xl:block mt-16 text-lg text-gray-500 dark:text-ternary-light">
           {{ projectsDescription }}
         </p>
       </div>
@@ -74,7 +77,7 @@ const filteredProjects = computed(() => {
       </div>
     </div>
     <!-- View more projects button -->
-    <div class="my-5 sm:mt-14 flex justify-center">
+    <div v-show="!isNotHomePage" class="my-5 sm:mt-14 flex justify-center">
       <NuxtLink to="/projects" class="
           font-general-medium
           flex
@@ -97,5 +100,4 @@ const filteredProjects = computed(() => {
   </section>
 </template>
 
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>
