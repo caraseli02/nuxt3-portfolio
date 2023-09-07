@@ -8,6 +8,7 @@ export default <Partial<Config>>{
     './pages/**/*.vue',
     './plugins/**/*.{js,ts}',
     './nuxt.config.{js,ts}',
+    './assets/*.{js,ts}',
   ],
   darkMode: 'class',
   theme: {
@@ -35,9 +36,29 @@ export default <Partial<Config>>{
           from: { transform: 'translateX(0)' },
           to: { transform: 'translateX(-100%)' },
         },
+        "fade-out-down": {
+          from: { transform: 'translateY(0)', opacity: "1" },
+          to: { transform: 'translateY(40%), opacity: "0"' },
+        },
+        "make-it-bigger": {
+          "0%": {
+            transform: 'translateY(0%)'
+          },
+          "80%": {
+            transform: 'translateY(-30%)'
+          },
+          "90%": {
+            transform: 'translateY(-10%) scale(1.75)'
+          },
+          "100%": {
+            transform: 'translateY(0) scale(2)'
+          },
+        }
       },
       animation: {
         marquee: 'marquee 10s linear infinite',
+        "fade-out-down": "fade-out-down liniar forwards",
+        "make-it-bigger": "make-it-bigger liniar forwards"
       },
     },
   },
